@@ -28,11 +28,11 @@ let tryAgain = document.querySelector('#again')
 let quizIndex;
 
 //to loop over the questions
-let index = 0;
+let index = 0
 
 //to avoid duplicate questions while randomizing
-let dupArray=[];
-let myArr= [];
+let dupArray=[]
+let myArr= []
 
 //to count correct answers
 let counter=0;
@@ -93,7 +93,7 @@ const quizQuestions = [
 
 //store questions and answers into the variables already set to push to html
 function quiz(){
-    questionNumber.innerHTML = `Question ${index+1} / ${quizQuestions.length}`
+    questionNumber.innerHTML = `Question ${index+1} of ${quizQuestions.length}`
     question.innerHTML = quizQuestions[quizIndex].question
     btn1.innerHTML = quizQuestions[quizIndex].answers.a
     btn2.innerHTML = quizQuestions[quizIndex].answers.b
@@ -154,15 +154,13 @@ function enableOptions(){
 function validate(){
     //if disabled is not part of options' class
     if(!options[0].classList.contains('disabled')){
-        //next.style.display= 'none'
-        //next.style.display="none"
+        
         alert('Please select an option')
     }else{
-        enableOptions();
-        randomize();
+        enableOptions()
+        randomize()
     }
 }
-//btn1.addEventListener('click', check())
 
 //make sure user selects an option before going to next question
 function nextQ(){
@@ -219,59 +217,7 @@ function playAgain(){
 }
 //document.querySelector('#again').addEventListener('click', playAgain())
 window.onload=function(){
-    randomize();
+    randomize()
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-//hide the next button while user hasn't picked an option
-document.querySelector('#next').style.display="block"
-
-//hide the next button when user hasn't picked an option and display after user has picked one
-function nextQ(){
-  document.querySelector('#next').style.display="none"
-  document.querySelector('.answer-btn')  .style.display='block'
-}
-*/
