@@ -11,14 +11,14 @@ main{
     width: 100%;
     top: 50%;
     left: 0;
-     margin-top: -210px;    
+    margin-top: -210px;    
 }
 #wrapper{
     border: 1px solid #ccc;
-   /* max-width: 600px;*/
-     width: 60%; 
-     display: flex;
-     flex-direction: column;
+    max-width: 600px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
     border-radius: 5px;
     background:radial-gradient(circle, #303946, #0b0c10) ;
     margin:0 auto;
@@ -65,9 +65,10 @@ main #wrapper .opt{
     font-size: 18px;
     border-radius: 3px;
 }
-main #wrapper .opt:hover{
+main #wrapper .hover{
     background-color: #24305e;
 }
+
 main #wrapper .disabled{
     pointer-events: none;
 }
@@ -79,10 +80,13 @@ main #wrapper button, .the-end #game-over button#again{
     font-size: 18px;
     font-weight: 700;
     display: block;
-    margin: 2px auto;
+    margin: 5px auto;
     border-radius: 4px;
     background-color: #66fcf1;
     outline: none;
+}
+main #wrapper .nxt-btn button#next{
+    margin-bottom: 5%;
 }
 main #wrapper .nxt-btn button#next:hover, .the-end #game-over button#again:hover{
     background-color: #24305e;
@@ -93,7 +97,7 @@ main #wrapper .right-answer{
     background-color: green;
     color: white;
 }
-.wrong-answer{
+main #wrapper .wrong-answer{
     background-color: red;
     color: white;
 }
@@ -115,7 +119,7 @@ main #wrapper .right-answer{
     color: #fff;
     padding: 10% 10%;
     width: 45%;
-    font-size: 140%;
+    font-size: 120%;
     border-radius: 5px;
     text-align: center;
     
@@ -125,7 +129,7 @@ main #wrapper .right-answer{
     font-family: 'Orbitron', sans-serif;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
     animation: blinker 1s linear infinite;
-    transition: 2s ease-in; 
+    /* transition: 2s ease-in;  */
 }/*
 @keyframes blinker{
     50%{
@@ -135,4 +139,10 @@ main #wrapper .right-answer{
 
 .visible{
     display: flex;
+}
+
+@media(min-width: 500px){
+    .the-end #game-over #g-o{
+        font-size: 150%;
+    }
 }

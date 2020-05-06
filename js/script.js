@@ -101,14 +101,29 @@ function quiz(){
     index++
 }
 
-//check if user picks correct answer and change bgcolor and text color according to option selected
+//select all html of class opt and for each item: add hover, remove hover when needed
+let opt =document.querySelectorAll('.opt').forEach(item =>{
+    item.addEventListener('mouseover', function(){
+   item.classList.add('hover')
+})
+    item.addEventListener('mouseout', function(){
+        item.classList.remove('hover')
+    })
+
+})
+
+
+
+//check and change class(style) of selected and right options
 function check(ans){
     if (ans.id == quizQuestions[quizIndex].correctAnswer){
+        
         ans.classList.add('right-answer')
         counter++
         score.innerHTML =`Score: ${counter}`   
     }
     else{
+        
         ans.classList.add('wrong-answer')
         
     }
@@ -131,6 +146,7 @@ function disableOptions(){
 function enableOptions(){
     for(i=0; i<options.length; i++){
         options[i].classList.remove('disabled', 'right-answer', 'wrong-answer' )
+        
     }
 }
 
