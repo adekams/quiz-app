@@ -120,7 +120,7 @@ function check(ans){
         
         ans.classList.add('right-answer')
         counter++
-        score.innerHTML =`Score: ${counter}`   
+        score.innerHTML =`Score: ${counter} / ${quizQuestions.length}`   
     }
     else{
         
@@ -207,8 +207,7 @@ function randomize(){
 //show game over page after the fifth question
 function gameOver(){
     document.querySelector('.the-end').classList.add('visible')
-    finalScore.innerHTML = `You scored ${counter} of ${quizQuestions.length}`
-
+    finalScore.innerHTML = `Your total Score is ${counter}`
 }
 
 //allow user start the game again

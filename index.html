@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
-    <title>Quiz</title>
+    <title>Quiz App</title>
 </head>
 <body>
     <main>
@@ -12,23 +12,20 @@
             <h1 id="heading">Frontend Quiz</h1>
 
             <div class="question-index">
-                <h3 id="question-num">Question 1 of <span id="totalQ">5</span></h3> 
+                <h3 id="question-num"> <span id="totalQ">5</span></h3> 
                 <div class="counter">
-                    <p id="score">Score:</p>
+                    <p id="score">Score:  /5</p>
                 </div>
             </div>
 
             <hr>
 
-            <p id="question">
-                
-                Question 1
-            </p> 
+            <p id="question"> </p>
 
             <div class="options">
-                <div class="opt" id="a" onclick="check(this)">option 1</div>
-                <div class="opt" id="b" onclick="check(this)">option 2</div>
-                <div class="opt" id="c" onclick="check(this)">option 3</div>
+                <div class="opt" id="a" onclick="check(this)"></div>
+                <div class="opt" id="b" onclick="check(this)"></div>
+                <div class="opt" id="c" onclick="check(this)"></div>
             
             </div>
             
@@ -40,7 +37,7 @@
         <div class="the-end">
             <div id="game-over">
                 <p id="g-o">Game Over!</p>
-                <p id='final-score'>Your score is 1 out of 5</p>
+                <p id='final-score'></p>
                 <button type="button" id="again" onclick="playAgain()">Play Again</button>
             
             </div>
