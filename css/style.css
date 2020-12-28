@@ -166,7 +166,7 @@ main #wrapper .wrong-answer{
 }
 @media(min-width: 700px){
     #wrapper{
-      max-width: 60%;  
+      max-width: 900px;  
     }
     .the-end #game-over #g-o{
         font-size: 180%;
